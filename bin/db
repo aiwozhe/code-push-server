@@ -107,7 +107,8 @@ if (command === 'init') {
             {version:'0.2.15', 'path':path.resolve(__dirname, '../sql/codepush-v0.2.15-patch.sql')},
             {version:'0.3.0', 'path':path.resolve(__dirname, '../sql/codepush-v0.3.0-patch.sql')},
             {version:'0.4.0', 'path':path.resolve(__dirname, '../sql/codepush-v0.4.0-patch.sql')},
-            {version:'0.5.0', 'path':path.resolve(__dirname, '../sql/codepush-v0.5.0-patch.sql')}
+            {version:'0.5.0', 'path':path.resolve(__dirname, '../sql/codepush-v0.5.0-patch.sql')},
+            {version:'0.5.1', 'path':path.resolve(__dirname, '../sql/codepush-v0.5.1-patch.sql')}
         ];
         for (var i = 0; i < allSqlFile.length; i++) {
             if(!_.gt(allSqlFile[i]['version'], version_no)) {
