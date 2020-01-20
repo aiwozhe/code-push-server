@@ -21,29 +21,15 @@ $ sudo npm i -g pm2
 > notice. mysql8.x default auth caching_sha2_pasword not support in node-mysql2 see [issue](https://github.com/mysqljs/mysql/pull/1962)
 
 
-
-## GET code-push-server FROM NPM
-
-```shell
-$ npm install code-push-server@latest -g
-```
-
-
 ## GET code-push-server FROM SOURCE CODE
 
 ```shell
-$ git clone https://github.com/lisong/code-push-server.git
+$ git clone https://github.com/aiwozhe/code-push-server.git
 $ cd code-push-server
 $ npm install
 ```
 
 ## INIT DATABASE
-
-```shell
-$ code-push-server-db init --dbhost "your mysql host" --dbport "your mysql port"  --dbuser "your mysql user" --dbpassword "your mysql password"
-```
-
-or from source code
 
 ```shell
 $ ./bin/db init --dbhost "your mysql host" --dbport "your mysql port"  --dbuser "your mysql user" --dbpassword "your mysql password"
@@ -53,7 +39,7 @@ $ ./bin/db init --dbhost "your mysql host" --dbport "your mysql port"  --dbuser 
 
 ## CONFIGURE for code-push-server
 
-save the file [config.js](https://github.com/lisong/code-push-server/blob/master/config/config.js)
+save the file [config.js](https://github.com/aiwozhe/code-push-server/blob/master/config/config.js)
 
 some config have to change:
 
@@ -65,7 +51,7 @@ some config have to change:
 
 ## CONFIGURE for pm2
 
-save the file [process.json](https://github.com/lisong/code-push-server/blob/master/docs/process.json)
+save the file [process.json](https://github.com/aiwozhe/code-push-server/blob/master/docs/process.json)
 
 some config have to change:
 
@@ -124,16 +110,6 @@ Connection: keep-alive
 
 
 ## UPGRADE
-
-*from npm package*
-
-```shell
-$ npm install -g code-push-server@latest
-$ code-push-server-db upgrade --dbhost "your mysql host" --dbport "your mysql port"  --dbuser "your mysql user" --dbpassword "your mysql password" # upgrade codepush database
-$ pm2 restart code-push-server # restart service
-```
-
-*from source code*
 
 ```shell
 $ cd /path/to/code-push-server

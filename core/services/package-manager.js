@@ -71,7 +71,7 @@ proto.parseReqFile = function (req) {
 proto.createDeploymentsVersionIfNotExist = function (deploymentId, appVersion, minVersion, maxVersion, t) {
   return models.DeploymentsVersions.findOrCreate({
     where: {deployment_id: deploymentId, app_version: appVersion, min_version:minVersion, max_version:maxVersion},
-    defaults: {current_package_id: 0},
+    defaults: {current_package_id: 0, label_id: 0},
     transaction: t
   })
   .spread((data, created)=>{
@@ -117,6 +117,7 @@ proto.createPackage = function (deploymentId, appVersion, packageHash, manifestH
     return models.sequelize.transaction((t) => {
       return self.createDeploymentsVersionIfNotExist(deploymentId, appVersion, params.min_version, params.max_version, t)
       .then((deploymentsVersions) => {
+        var versionLabelId = deploymentsVersions.label_id + 1;
         return models.Packages.create({
           deployment_version_id: deploymentsVersions.id,
           deployment_id: deploymentId,
@@ -126,7 +127,7 @@ proto.createPackage = function (deploymentId, appVersion, packageHash, manifestH
           size: size,
           manifest_blob_url: manifestHash,
           release_method: releaseMethod,
-          label: "v" + labelId,
+          label: "v" + versionLabelId,
           released_by: releaseUid,
           is_mandatory: isMandatory,
           is_disabled: isDisabled,
@@ -136,6 +137,7 @@ proto.createPackage = function (deploymentId, appVersion, packageHash, manifestH
         },{transaction: t})
         .then((packages) => {
           deploymentsVersions.set('current_package_id', packages.id);
+          deploymentsVersions.set('label_id', versionLabelId);
           return Promise.all([
             deploymentsVersions.save({transaction: t}),
             models.Deployments.update(

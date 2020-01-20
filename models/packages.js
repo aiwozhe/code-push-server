@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     deployment_version_id: DataTypes.INTEGER(10),
     deployment_id: DataTypes.INTEGER(10),
-    description: DataTypes.STRING,
+    description: DataTypes.JSON,
     package_hash: DataTypes.STRING,
     blob_url: DataTypes.STRING,
     size: DataTypes.INTEGER(10),

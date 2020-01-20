@@ -17,8 +17,8 @@
   ],
   "author": {
     "name": "Tab Lee",
-    "email": "lisong2010@gmail.com",
-    "url": "https://github.com/lisong/"
+    "email": "aiwozhe@yeah.net",
+    "url": "https://github.com/aiwozhe/"
   },
   "bin": {
     "code-push-server": "./bin/www",

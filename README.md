@@ -1,13 +1,13 @@
-# CodePush Server [source](https://github.com/lisong/code-push-server) 
+# CodePush Server [source](https://github.com/aiwozhe/code-push-server) 
 
 [![NPM](https://nodei.co/npm/code-push-server.svg?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/code-push-server/)
 
 [![NPM Version](https://img.shields.io/npm/v/code-push-server.svg)](https://npmjs.org/package/code-push-server)
 [![Node.js Version](https://img.shields.io/node/v/code-push-server.svg)](https://nodejs.org/en/download/)
-[![Linux Status](https://img.shields.io/travis/lisong/code-push-server/master.svg?label=linux)](https://travis-ci.org/lisong/code-push-server)
-[![Windows Status](https://img.shields.io/appveyor/ci/lisong/code-push-server/master.svg?label=windows)](https://ci.appveyor.com/project/lisong/code-push-server)
-[![Coverage Status](https://img.shields.io/coveralls/lisong/code-push-server/master.svg)](https://coveralls.io/github/lisong/code-push-server)
-[![Dependency Status](https://img.shields.io/david/lisong/code-push-server.svg)](https://david-dm.org/lisong/code-push-server)
+[![Linux Status](https://img.shields.io/travis/aiwozhe/code-push-server/master.svg?label=linux)](https://travis-ci.org/aiwozhe/code-push-server)
+[![Windows Status](https://img.shields.io/appveyor/ci/aiwozhe/code-push-server/master.svg?label=windows)](https://ci.appveyor.com/project/aiwozhe/code-push-server)
+[![Coverage Status](https://img.shields.io/coveralls/aiwozhe/code-push-server/master.svg)](https://coveralls.io/github/aiwozhe/code-push-server)
+[![Dependency Status](https://img.shields.io/david/aiwozhe/code-push-server.svg)](https://david-dm.org/aiwozhe/code-push-server)
 [![Known Vulnerabilities](https://snyk.io/test/npm/code-push-server/badge.svg)](https://snyk.io/test/npm/code-push-server)
 [![Licenses](https://img.shields.io/npm/l/code-push-server.svg)](https://spdx.org/licenses/MIT)
 
@@ -48,14 +48,14 @@ $ code-push login http://api.code-push.com #登录
 
 ### client eg.
 
-[ReactNative CodePushDemo](https://github.com/lisong/code-push-demo-app)
+[ReactNative CodePushDemo](https://github.com/aiwozhe/code-push-demo-app)
 
-[Cordova CodePushDemo](https://github.com/lisong/code-push-cordova-demo-app)
+[Cordova CodePushDemo](https://github.com/aiwozhe/code-push-cordova-demo-app)
 
 ## HOW TO INSTALL code-push-server
 
-- [docker](https://github.com/lisong/code-push-server/blob/master/docker/README.md) (recommend)
-- [manual operation](https://github.com/lisong/code-push-server/blob/master/docs/README.md)
+- [docker](https://github.com/aiwozhe/code-push-server/blob/master/docker/README.md) (recommend)
+- [manual operation](https://github.com/aiwozhe/code-push-server/blob/master/docs/README.md)
 
 ## DEFAULT ACCOUNT AND PASSWORD
 
@@ -64,18 +64,18 @@ $ code-push login http://api.code-push.com #登录
 
 ## HOW TO USE
 
-- [normal](https://github.com/lisong/code-push-server/blob/master/docs/react-native-code-push.md)
+- [normal](https://github.com/aiwozhe/code-push-server/blob/master/docs/react-native-code-push.md)
 - [react-native-code-push](https://github.com/Microsoft/react-native-code-push)
 - [code-push](https://github.com/Microsoft/code-push)
 
 
 ## ISSUES
 
-[code-push-server normal solution](https://github.com/lisong/code-push-server/issues/135)
+[code-push-server normal solution](https://github.com/aiwozhe/code-push-server/issues/135)
 
-[An unknown error occurred](https://github.com/lisong/code-push-server/issues?utf8=%E2%9C%93&q=unknown)
+[An unknown error occurred](https://github.com/aiwozhe/code-push-server/issues?utf8=%E2%9C%93&q=unknown)
 
-[modify password](https://github.com/lisong/code-push-server/issues/43)
+[modify password](https://github.com/aiwozhe/code-push-server/issues/43)
 
 
 # UPDATE TIME LINE
@@ -95,10 +95,10 @@ $ code-push login http://api.code-push.com #登录
 > use google diff-match-patch calculate text file diff patch
 
 - support iOS and Android
-- use `"react-native-code-push": "git+https://git@github.com/lisong/react-native-code-push.git"` instead `"react-native-code-push": "x.x.x"` in `package.json`
+- use `"react-native-code-push": "git+https://git@github.com/aiwozhe/react-native-code-push.git"` instead `"react-native-code-push": "x.x.x"` in `package.json`
 - change `apps`.`is_use_diff_text` to `1` in mysql codepush database
 
 ## License
-MIT License [read](https://github.com/lisong/code-push-server/blob/master/LICENSE)
+MIT License [read](https://github.com/aiwozhe/code-push-server/blob/master/LICENSE)
 
 
